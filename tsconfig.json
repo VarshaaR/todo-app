@@ -1,7 +1,17 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": false,
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "module": "ESNext",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "lib": ["dom", "esnext"],
+    "types": ["jest", "node", "@testing-library/jest-dom"]
+  },
+  "include": ["src", "__mocks__"]
 }
