@@ -11,8 +11,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "lint": "eslint . --ext .ts,.tsx",
-    "format": "prettier --write .",
-    "prepare": "husky install"
+    "format": "prettier --write ."
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -21,8 +20,10 @@
     ]
   },
   "dependencies": {
+    "i18next": "^25.0.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
+    "react-i18next": "^15.4.1",
     "sass": "^1.86.3"
   },
   "devDependencies": {
