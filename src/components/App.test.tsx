@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("renders Vite + React heading", () => {
+test("renders Todo List heading", () => {
   render(<App />);
-  const headingElement = screen.getByText(/vite \+ react/i);
+  const headingElement = screen.getByText(/todo list/i);
   expect(headingElement).toBeInTheDocument();
 });
