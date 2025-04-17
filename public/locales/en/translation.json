@@ -1,6 +1,13 @@
 {
     "common": {
-        "date": "Date"
+        "date": "Date",
+        "task.name": "Task Name",
+        "due.date": "Due Date",
+        "category" :"Category",
+        "add.task" :"Add Task",
+        "work":"Work",
+        "personal":"Personal",
+        "delete": "Delete"
     },
     "welcome": {
         "title": "Hey there, welcome!",

@@ -1,6 +1,16 @@
 {
-    "welcome": {
-      "title": "Hallo, willkommen!",
-      "description": "Hier sind deine Aufgaben für heute – lass sie uns erledigen!"
-    }
+  "common": {
+    "date": "Datum",
+    "task.name": "Aufgabenname",
+    "due.date": "Fälligkeitsdatum",
+    "category": "Kategorie",
+    "add.task": "Aufgabe hinzufügen",
+    "work": "Arbeit",
+    "personal": "Persönlich",
+    "delete": "Löschen"
+  },
+  "welcome": {
+    "title": "Hallo, willkommen!",
+    "description": "Hier sind deine Aufgaben für heute – lass sie uns erledigen!"
   }
+}

@@ -1,6 +1,16 @@
 {
-    "welcome": {
-      "title": "Salut, bienvenue !",
-      "description": "Voici vos tâches pour aujourd’hui — accomplissons-les !"
-    }
+  "common": {
+    "date": "Date",
+    "task.name": "Nom de la tâche",
+    "due.date": "Date d'échéance",
+    "category": "Catégorie",
+    "add.task": "Ajouter une tâche",
+    "work": "Travail",
+    "personal": "Personnel",
+    "delete": "Supprimer"
+  },
+  "welcome": {
+    "title": "Salut, bienvenue !",
+    "description": "Voici vos tâches pour aujourd’hui — accomplissons-les !"
   }
+}
