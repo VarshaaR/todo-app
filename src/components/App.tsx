@@ -1,13 +1,14 @@
 import React from "react";
 import "../styles/main.scss";
-import Button from "@mui/material/Button";
+import WelcomeBanner from "./WelcomeBanner";
+import TodoContainer from "./TodoContainer";
 
 function App() {
   return (
-    <>
-      <h1 className="bg-blue-500 text-white p-4 rounded-lg">Todo List</h1>
-      <Button variant="outlined">Outlined</Button>
-    </>
+    <div className="cb-p-10" data-testid="app-container">
+      <WelcomeBanner />
+      <TodoContainer />
+    </div>
   );
 }
 
