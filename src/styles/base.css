@@ -1,0 +1,20 @@
+@layer base {
+  h1 {
+    @apply cb-text-4xl cb-font-bold;
+  }
+  h2 {
+    @apply cb-text-3xl cb-font-semibold;
+  }
+  h3 {
+    @apply cb-text-2xl cb-font-medium;
+  }
+  h4 {
+    @apply cb-text-xl;
+  }
+  h5 {
+    @apply cb-text-lg;
+  }
+  h6 {
+    @apply cb-text-base;
+  }
+}

@@ -10,5 +10,6 @@ module.exports = {
     moduleNameMapper: {
       '\\.svg$': '<rootDir>/__mocks__/svgMock.ts',
       '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+      '^react-world-flags$': '<rootDir>/__mocks__/react-world-flags.tsx',
     },
   };

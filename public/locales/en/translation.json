@@ -1,0 +1,9 @@
+{
+    "common": {
+        "date": "Date"
+    },
+    "welcome": {
+        "title": "Hey there, welcome!",
+        "description": " Here are your tasks for today — let’s get them done!"
+    }
+}
