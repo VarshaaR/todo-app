@@ -25,6 +25,7 @@ const TodoList: React.FC<TodoListProps> = ({
         {sortByDueDate(tasks).map((task) => (
           <li
             key={task.id}
+            data-testid={`todo-item-${task.id}`}
             className={
               isDueToday(task.dueDate)
                 ? "cb-border-l-4 cb-border-yellow-500"

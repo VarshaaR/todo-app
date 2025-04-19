@@ -10,7 +10,8 @@
     "personal": "Personal",
     "delete": "Delete",
     "cancel": "Cancel",
-    "drop.here": "Drag task item and drop here to delete"
+    "drop.here": "Drag task item and drop here to delete",
+    "sorted.by": "Sorted by"
   },
   "empty": {
     "title": "Hooray! You've Completed All Tasks",
@@ -18,8 +19,8 @@
     "alt.image.text": "Task empty state image"
   },
   "welcome": {
-    "title": "Hey there, welcome!",
-    "description": " Here are your tasks for today — let’s get them done!"
+    "title": "Good to see you again!",
+    "description": "Your tasks are ready. Let’s get started and make progress."
   },
   "emptyState": {
     "completed": {
@@ -40,5 +41,9 @@
       "title": "Confirm Deletion",
       "desc": "Are you sure you want to delete this task?"
     }
+  },
+  "error.msg": {
+    "min.char": "Minimum length is 3 characters",
+    "max.char": "Maximum length is 25 characters"
   }
 }
