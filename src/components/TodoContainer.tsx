@@ -7,6 +7,7 @@ import {
   loadFromLocalStorage,
 } from "../utils/localStorageUtils";
 import { Todo, Status } from "../types/todo";
+import EmptyTaskContainer from "./EmptyTaskContainer";
 // import { Todo, Status, Category } from "../types/todo";
 
 const TodoContainer = function () {
@@ -27,7 +28,7 @@ const TodoContainer = function () {
   //   },
   // ];
   const [tasks, setTasks] = useState<Todo[]>([]);
-  const [filter] = useState<Status>(Status.All);
+  const [filter, setFilter] = useState<Status>(Status.All);
 
   useEffect(() => {
     const storedTasks = loadFromLocalStorage();
@@ -77,11 +78,39 @@ const TodoContainer = function () {
       data-testid="todo-container"
     >
       <div className="cb-w-[70%] cb-md:w-2/3">
-        <TodoList
-          tasks={filteredTasks}
-          toggleTaskCompletion={toggleTaskCompletion}
-          deleteTask={deleteTask}
-        />
+        {tasks.length === 0 ? (
+          <EmptyTaskContainer status={filter} />
+        ) : (
+          <div data-testid="todo-list-container">
+            <div
+              className="cb-flex cb-gap-2 cb-mb-4 cb-border-b cb-border-solid cb-pb-4 cb-border-gray-300"
+              data-testid="todo-status-container"
+            >
+              {Object.values(Status).map((status) => (
+                <button
+                  key={status}
+                  onClick={() => setFilter(status)}
+                  className={`cb-px-4 cb-py-1 cb-rounded cb-text-sm cb-font-medium cb-border ${
+                    filter === status
+                      ? "cb-bg-blue-500 cb-text-white"
+                      : "cb-bg-white cb-text-gray-700 cb-border-gray-300 hover:cb-bg-gray-100"
+                  }`}
+                >
+                  {status.charAt(0).toUpperCase() + status.slice(1)}
+                </button>
+              ))}
+            </div>
+            {filteredTasks.length === 0 ? (
+              <EmptyTaskContainer status={filter} />
+            ) : (
+              <TodoList
+                tasks={filteredTasks}
+                toggleTaskCompletion={toggleTaskCompletion}
+                deleteTask={deleteTask}
+              />
+            )}
+          </div>
+        )}
       </div>
       <div className="cb-w-[30%] cb-md:cb-w-1/3 cb-flex cb-justify-end">
         <TodoForm addTask={addTask} />

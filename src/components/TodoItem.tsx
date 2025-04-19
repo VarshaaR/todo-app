@@ -36,17 +36,19 @@ const TodoItem: React.FC<TodoItemProps> = ({ task, toggleTaskCompletion }) => {
         drag(node);
         preview(node);
       }}
+      data-testid="item-container"
     >
       <Card
         variant="outlined"
         ref={cardRef}
         className={`cb-mb-4 ${
           task.status === Status.Completed
-            ? "cb-bg-gray-100 cb-opacity-70"
+            ? "cb-bg-gray-400 cb-opacity-70"
             : "cb-bg-white"
         }`}
         style={{
           opacity: isDragging ? 0.5 : 1,
+          cursor: isDragging ? "pointer" : "default",
         }}
       >
         <CardContent className="cb-flex cb-items-center cb-gap-2 cb-w-full">

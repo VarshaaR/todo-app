@@ -68,9 +68,10 @@ const TodoForm: React.FC<TodoFormProps> = ({ addTask }) => {
       onSubmit={handleSubmit}
       className="cb-flex cb-flex-col cb-gap-2 cb-min-w-64"
     >
+      <h4 className="cb-text-blue-500">{t("common.new.task")}</h4>
       {/* Task Name */}
       <FormControl>
-        <FormLabel>
+        <FormLabel className="cb-text-sm cb-text-gray-600 cb-mb-2">
           {t("common.task.name")}
           <span className="cb-text-red-500">*</span>
         </FormLabel>
@@ -79,13 +80,18 @@ const TodoForm: React.FC<TodoFormProps> = ({ addTask }) => {
           onChange={(e) => setTaskName(e.target.value)}
           error={taskName.length > 0 && !isTaskNameValid}
           helperText={getTaskNameHelperText(taskName)}
+          sx={{
+            "& input": {
+              padding: "8px 14px",
+            },
+          }}
           required
         />
       </FormControl>
 
       {/* Due Date */}
       <FormControl>
-        <FormLabel>
+        <FormLabel className="cb-text-sm cb-text-gray-600 cb-mb-2">
           {t("common.due.date")}
           <span className="cb-text-red-500">*</span>
         </FormLabel>
@@ -96,13 +102,20 @@ const TodoForm: React.FC<TodoFormProps> = ({ addTask }) => {
             minDate={dayjs()}
             openTo="day"
             format="DD/MM/YYYY"
+            sx={{
+              "& .MuiPickersInputBase-sectionsContainer": {
+                padding: "8px 0",
+              },
+            }}
           />
         </LocalizationProvider>
       </FormControl>
 
       {/* Category */}
       <FormControl>
-        <FormLabel>{t("common.category")}</FormLabel>
+        <FormLabel className="cb-text-sm cb-text-gray-600">
+          {t("common.category")}
+        </FormLabel>
         <RadioGroup
           row
           value={category}

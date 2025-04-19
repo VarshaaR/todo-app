@@ -13,8 +13,10 @@ function WelcomeBanner() {
     >
       <div>
         <p className="cb-text-sm cb-text-gray-500">{today}</p>
-        <h3 className="">{t("welcome.title")}</h3>
-        <p className="cb-text-base">{t("welcome.description")}</p>
+        <h3 className="cb-text-blue-500">{t("welcome.title")}</h3>
+        <p className="cb-text-sm cb-text-gray-600 cb-mb-4">
+          {t("welcome.description")}
+        </p>
       </div>
       <LanguageSwitcher />
     </div>

@@ -11,12 +11,14 @@ import {
   DialogTitle,
   Button,
 } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 interface TrashBinProps {
   onConfirmDelete: (id: number) => void;
 }
 
 const TrashBin: React.FC<TrashBinProps> = ({ onConfirmDelete }) => {
+  const { t } = useTranslation();
   const [openDialog, setOpenDialog] = useState(false);
   const [taskToDelete, setTaskToDelete] = useState<number | null>(null);
 
@@ -65,7 +67,7 @@ const TrashBin: React.FC<TrashBinProps> = ({ onConfirmDelete }) => {
           <div
             className={`
               cb-w-16 cb-h-16 cb-rounded-full cb-flex cb-items-center cb-justify-center cb-transition-all cb-duration-300 cb-cursor-pointer
-              ${isActive ? "cb-bg-red-600" : "cb-bg-gray-500"}
+              ${isActive ? "cb-bg-red-400" : "cb-bg-blue-400"}
               ${isDragging ? "cb-animate-shake" : ""}
             `}
           >
@@ -75,18 +77,16 @@ const TrashBin: React.FC<TrashBinProps> = ({ onConfirmDelete }) => {
       </div>
 
       <Dialog open={openDialog} onClose={handleCancel}>
-        <DialogTitle>Confirm Deletion</DialogTitle>
+        <DialogTitle>{t("bin.confirm.model.title")}</DialogTitle>
         <DialogContent>
-          <DialogContentText>
-            Are you sure you want to delete this task?
-          </DialogContentText>
+          <DialogContentText>{t("bin.confirm.model.desc")}</DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleCancel} color="primary">
-            Cancel
+            {t("common.delete")}
           </Button>
           <Button onClick={handleConfirm} color="error" autoFocus>
-            Delete
+            {t("common.delete")}
           </Button>
         </DialogActions>
       </Dialog>
