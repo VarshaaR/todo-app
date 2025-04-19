@@ -26,6 +26,10 @@
       "title": "You’re on your way!",
       "description": "You're making progress! Keep going to mark your tasks as done."
     },
+    "pending": {
+      "title": "You're on fire!",
+      "description": "Every task is done and dusted. Take a break — you’ve earned it!"
+    },
     "all": {
       "title": "Hooray! You've Completed All Tasks",
       "description": "Keep it up, and add more tasks to continue your productivity streak."

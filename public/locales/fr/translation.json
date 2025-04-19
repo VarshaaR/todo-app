@@ -26,6 +26,10 @@
       "title": "Vous êtes sur la bonne voie !",
       "description": "Vous progressez ! Continuez à terminer vos tâches."
     },
+    "pending": {
+      "title": "Vous êtes en feu !",
+      "description": "Toutes vos tâches sont terminées. Profitez d’un moment de repos bien mérité !"
+    },
     "all": {
       "title": "Hourra ! Vous avez terminé toutes les tâches",
       "description": "Continuez comme ça, ajoutez d'autres tâches pour maintenir votre élan de productivité."

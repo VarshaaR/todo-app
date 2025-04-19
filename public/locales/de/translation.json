@@ -26,6 +26,10 @@
       "title": "Du bist auf einem guten Weg!",
       "description": "Du machst Fortschritte! Weiter so, um deine Aufgaben abzuschließen."
     },
+    "pending": {
+      "title": "Du rockst das!",
+      "description": "Alle Aufgaben sind erledigt. Gönn dir eine wohlverdiente Pause!"
+    },
     "all": {
       "title": "Hurra! Du hast alle Aufgaben erledigt",
       "description": "Mach weiter so und füge neue Aufgaben hinzu, um produktiv zu bleiben."
