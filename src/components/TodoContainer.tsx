@@ -8,37 +8,21 @@ import {
 } from "../utils/localStorageUtils";
 import { Todo, Status } from "../types/todo";
 import EmptyTaskContainer from "./EmptyTaskContainer";
-// import { Todo, Status, Category } from "../types/todo";
 
 const TodoContainer = function () {
-  // const mockTask: Todo[] = [
-  //   {
-  //     id: 1744974980844,
-  //     text: "sample",
-  //     category: Category.Work,
-  //     dueDate: 1745433000000,
-  //     status: Status.Pending,
-  //   },
-  //   {
-  //     id: 1744974997114,
-  //     text: "sample new task",
-  //     category: Category.Personal,
-  //     dueDate: 1745433000000,
-  //     status: Status.Pending,
-  //   },
-  // ];
   const [tasks, setTasks] = useState<Todo[]>([]);
   const [filter, setFilter] = useState<Status>(Status.All);
 
   useEffect(() => {
     const storedTasks = loadFromLocalStorage();
-    // const storedTasks = mockTask;
-
     setTasks(storedTasks);
   }, []);
 
   useEffect(() => {
     saveToLocalStorage(tasks);
+    if (tasks.length === 0) {
+      setFilter(Status.All);
+    }
   }, [tasks]);
 
   const addTask = (newTask: Todo) => {
