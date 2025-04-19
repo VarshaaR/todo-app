@@ -9,7 +9,8 @@
     "work": "Work",
     "personal": "Personal",
     "delete": "Delete",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "drop.here": "Drag task item and drop here to delete"
   },
   "empty": {
     "title": "Hooray! You've Completed All Tasks",

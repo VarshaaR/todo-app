@@ -63,7 +63,7 @@ const TrashBin: React.FC<TrashBinProps> = ({ onConfirmDelete }) => {
         ref={dropRef} // Use the created ref
         className="cb-absolute cb-bottom-4 cb-right-4 cb-sm:cb-bottom-6 cb-sm:cb-right-6 cb-w-24 cb-h-24 cb-z-40 cb-flex cb-items-center cb-justify-center"
       >
-        <Tooltip title="Drop here to delete" arrow>
+        <Tooltip title={t("common.drop.here")} arrow>
           <div
             className={`
               cb-w-16 cb-h-16 cb-rounded-full cb-flex cb-items-center cb-justify-center cb-transition-all cb-duration-300 cb-cursor-pointer

@@ -9,7 +9,8 @@
     "work": "Arbeit",
     "personal": "Persönlich",
     "delete": "Löschen",
-    "cancel": "Abbrechen"
+    "cancel": "Abbrechen",
+    "drop.here": "Ziehe die Aufgabe hierher, um sie zu löschen"
   },
   "empty": {
     "title": "Hurra! Du hast alle Aufgaben erledigt",

@@ -9,7 +9,8 @@
     "work": "Travail",
     "personal": "Personnel",
     "delete": "Supprimer",
-    "cancel": "Annuler"
+    "cancel": "Annuler",
+    "drop.here": "Faites glisser la tâche ici pour la supprimer"
   },
   "empty": {
     "title": "Hourra ! Vous avez terminé toutes les tâches",
