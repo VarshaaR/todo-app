@@ -12,4 +12,7 @@ module.exports = {
       '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
       '^react-world-flags$': '<rootDir>/__mocks__/react-world-flags.tsx',
     },
+    transformIgnorePatterns: [
+      "/node_modules/(?!(react-dnd|dnd-core|react-dnd-html5-backend)/)",
+    ],
   };
