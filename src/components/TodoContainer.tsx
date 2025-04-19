@@ -74,10 +74,10 @@ const TodoContainer = function () {
 
   return (
     <div
-      className="cb-flex cb-flex-row cb-md:cb-flex-col cb-gap-4 cb-px-4 cb-py-6"
+      className="cb-flex cb-flex-row cb-flex-wrap cb-px-4 cb-py-6 cb-gap-2 cb-justify-between"
       data-testid="todo-container"
     >
-      <div className="cb-w-[70%] cb-md:w-2/3">
+      <div className="cb-w-[70%]" data-testid="todo-list-wrapper">
         {tasks.length === 0 ? (
           <EmptyTaskContainer status={filter} />
         ) : (
@@ -112,10 +112,17 @@ const TodoContainer = function () {
           </div>
         )}
       </div>
-      <div className="cb-w-[30%] cb-md:cb-w-1/3 cb-flex cb-justify-end">
+
+      <div className="cb-min-w-fit" data-testid="add-list-container">
         <TodoForm addTask={addTask} />
       </div>
-      <TrashBin onConfirmDelete={deleteTask} />
+
+      <div
+        className="cb-fixed cb-bottom-4 cb-right-4 z-10"
+        data-testid="trashbin-container"
+      >
+        <TrashBin onConfirmDelete={deleteTask} />
+      </div>
     </div>
   );
 };
