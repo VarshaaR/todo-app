@@ -1,16 +1,39 @@
 {
   "common": {
     "date": "Date",
+    "new.task": "Créer une nouvelle tâche",
     "task.name": "Nom de la tâche",
     "due.date": "Date d'échéance",
     "category": "Catégorie",
     "add.task": "Ajouter une tâche",
     "work": "Travail",
     "personal": "Personnel",
-    "delete": "Supprimer"
+    "delete": "Supprimer",
+    "cancel": "Annuler"
+  },
+  "empty": {
+    "title": "Hourra ! Vous avez terminé toutes les tâches",
+    "desc": "Continuez comme ça, ajoutez d'autres tâches pour maintenir votre élan de productivité.",
+    "alt.image.text": "Image d'état vide des tâches"
   },
   "welcome": {
     "title": "Salut, bienvenue !",
-    "description": "Voici vos tâches pour aujourd’hui — accomplissons-les !"
+    "description": "Voici vos tâches pour aujourd'hui — accomplissons-les !"
+  },
+  "emptyState": {
+    "completed": {
+      "title": "Vous êtes sur la bonne voie !",
+      "description": "Vous progressez ! Continuez à terminer vos tâches."
+    },
+    "all": {
+      "title": "Hourra ! Vous avez terminé toutes les tâches",
+      "description": "Continuez comme ça, ajoutez d'autres tâches pour maintenir votre élan de productivité."
+    }
+  },
+  "bin": {
+    "confirm.model": {
+      "title": "Confirmer la suppression",
+      "desc": "Êtes-vous sûr de vouloir supprimer cette tâche ?"
+    }
   }
 }

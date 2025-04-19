@@ -1,39 +1,39 @@
 {
-    "common": {
-        "date": "Date",
-        "new.task": "Create new task",
-        "task.name": "Task Name",
-        "due.date": "Due Date",
-        "category" :"Category",
-        "add.task" :"Add Task",
-        "work":"Work",
-        "personal":"Personal",
-        "delete": "Delete",
-        "cancel": "Cancel"
+  "common": {
+    "date": "Date",
+    "new.task": "Create new task",
+    "task.name": "Task Name",
+    "due.date": "Due Date",
+    "category": "Category",
+    "add.task": "Add Task",
+    "work": "Work",
+    "personal": "Personal",
+    "delete": "Delete",
+    "cancel": "Cancel"
+  },
+  "empty": {
+    "title": "Hooray! You've Completed All Tasks",
+    "desc": "Keep it up, and add more tasks to continue your productivity streak.",
+    "alt.image.text": "Task empty state image"
+  },
+  "welcome": {
+    "title": "Hey there, welcome!",
+    "description": " Here are your tasks for today — let’s get them done!"
+  },
+  "emptyState": {
+    "completed": {
+      "title": "You’re on your way!",
+      "description": "You're making progress! Keep going to mark your tasks as done."
     },
-    "empty": {
-        "title": "Hooray! You've Completed All Tasks",
-        "desc": "Keep it up, and add more tasks to continue your productivity streak.",
-        "alt.image.text": "Task empty state image"
-    },
-    "welcome": {
-        "title": "Hey there, welcome!",
-        "description": " Here are your tasks for today — let’s get them done!"
-    },
-        "emptyState": {
-          "completed": {
-            "title": "You’re on your way!",
-            "description": "You're making progress! Keep going to mark your tasks as done."
-          },
-          "all": {
-            "title": "Hooray! You've Completed All Tasks",
-            "description": "Keep it up, and add more tasks to continue your productivity streak."
-          }
-        },
-        "bin": {
-          "confirm.model": {
-            "title": "Confirm Deletion",
-            "desc":"Are you sure you want to delete this task?"
-          }
-        } 
+    "all": {
+      "title": "Hooray! You've Completed All Tasks",
+      "description": "Keep it up, and add more tasks to continue your productivity streak."
+    }
+  },
+  "bin": {
+    "confirm.model": {
+      "title": "Confirm Deletion",
+      "desc": "Are you sure you want to delete this task?"
+    }
+  }
 }
