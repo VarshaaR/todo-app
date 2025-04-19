@@ -13,7 +13,7 @@ import { Todo, Status, Category } from "../types/todo";
 import { useTranslation } from "react-i18next";
 import dayjs from "dayjs";
 
-interface TodoItemProps {
+export interface TodoItemProps {
   task: Todo;
   toggleTaskCompletion: (id: number) => void;
   deleteTask: (id: number) => void;
@@ -48,7 +48,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ task, toggleTaskCompletion }) => {
         }`}
         style={{
           opacity: isDragging ? 0.5 : 1,
-          cursor: isDragging ? "pointer" : "default",
+          cursor: isDragging ? "grabbing" : "grab",
         }}
       >
         <CardContent className="cb-flex cb-items-center cb-gap-2 cb-w-full">
@@ -61,6 +61,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ task, toggleTaskCompletion }) => {
             <div className="cb-w-full">
               <div className="cb-flex cb-flex-col cb-justify-between cb-items-start cb-w-full">
                 <Chip
+                  data-testid="item-task-category"
                   label={task.category}
                   size="small"
                   variant="outlined"

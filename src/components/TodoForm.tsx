@@ -33,8 +33,8 @@ const TodoForm: React.FC<TodoFormProps> = ({ addTask }) => {
 
   const getTaskNameHelperText = (value: string) => {
     if (value.length === 0) return "";
-    if (value.length < 3) return "Minimum length is 3 characters";
-    if (value.length > 25) return "Maximum length is 25 characters";
+    if (value.length < 3) return t("error.msg.min.char");
+    if (value.length > 25) return t("error.msg.max.char");
     return "";
   };
   const handleDateChange = (newDate: Dayjs | null) => {
@@ -71,11 +71,15 @@ const TodoForm: React.FC<TodoFormProps> = ({ addTask }) => {
       <h4 className="cb-text-blue-500">{t("common.new.task")}</h4>
       {/* Task Name */}
       <FormControl>
-        <FormLabel className="cb-text-sm cb-text-gray-600 cb-mb-2">
+        <FormLabel
+          htmlFor="taskName-input"
+          className="cb-text-sm cb-text-gray-600 cb-mb-2"
+        >
           {t("common.task.name")}
           <span className="cb-text-red-500">*</span>
         </FormLabel>
         <TextField
+          id="taskName-input"
           value={taskName}
           onChange={(e) => setTaskName(e.target.value)}
           error={taskName.length > 0 && !isTaskNameValid}
@@ -91,7 +95,10 @@ const TodoForm: React.FC<TodoFormProps> = ({ addTask }) => {
 
       {/* Due Date */}
       <FormControl>
-        <FormLabel className="cb-text-sm cb-text-gray-600 cb-mb-2">
+        <FormLabel
+          htmlFor="due-date"
+          className="cb-text-sm cb-text-gray-600 cb-mb-2"
+        >
           {t("common.due.date")}
           <span className="cb-text-red-500">*</span>
         </FormLabel>
@@ -102,6 +109,11 @@ const TodoForm: React.FC<TodoFormProps> = ({ addTask }) => {
             minDate={dayjs()}
             openTo="day"
             format="DD/MM/YYYY"
+            slotProps={{
+              textField: {
+                id: "due-date",
+              },
+            }}
             sx={{
               "& .MuiPickersInputBase-sectionsContainer": {
                 padding: "8px 0",
@@ -119,6 +131,8 @@ const TodoForm: React.FC<TodoFormProps> = ({ addTask }) => {
         <RadioGroup
           row
           value={category}
+          name="task-category"
+          aria-labelledby="category-label"
           onChange={(e) => setCategory(e.target.value as Category)}
         >
           <FormControlLabel
@@ -135,7 +149,12 @@ const TodoForm: React.FC<TodoFormProps> = ({ addTask }) => {
       </FormControl>
 
       {/* Submit Button */}
-      <Button type="submit" variant="contained" disabled={!isFormValid}>
+      <Button
+        type="submit"
+        variant="contained"
+        disabled={!isFormValid}
+        data-testid="todoform-add-button"
+      >
         {t("common.add.task")}
       </Button>
     </Box>

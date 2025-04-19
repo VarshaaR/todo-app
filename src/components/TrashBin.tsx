@@ -60,8 +60,9 @@ const TrashBin: React.FC<TrashBinProps> = ({ onConfirmDelete }) => {
   return (
     <>
       <div
-        ref={dropRef} // Use the created ref
+        ref={dropRef}
         className="cb-absolute cb-bottom-4 cb-right-4 cb-sm:cb-bottom-6 cb-sm:cb-right-6 cb-w-24 cb-h-24 cb-z-40 cb-flex cb-items-center cb-justify-center"
+        data-testid="trashbin-container"
       >
         <Tooltip title={t("common.drop.here")} arrow>
           <div
@@ -76,14 +77,18 @@ const TrashBin: React.FC<TrashBinProps> = ({ onConfirmDelete }) => {
         </Tooltip>
       </div>
 
-      <Dialog open={openDialog} onClose={handleCancel}>
+      <Dialog
+        open={openDialog}
+        onClose={handleCancel}
+        data-testid="delete-confirm-model"
+      >
         <DialogTitle>{t("bin.confirm.model.title")}</DialogTitle>
         <DialogContent>
           <DialogContentText>{t("bin.confirm.model.desc")}</DialogContentText>
         </DialogContent>
-        <DialogActions>
+        <DialogActions data-testid="delete-confirm-actions">
           <Button onClick={handleCancel} color="primary">
-            {t("common.delete")}
+            {t("common.cancel")}
           </Button>
           <Button onClick={handleConfirm} color="error" autoFocus>
             {t("common.delete")}

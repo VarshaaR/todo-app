@@ -7,7 +7,7 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 
 function App() {
   return (
-    <div className="cb-p-10" data-testid="app-container">
+    <div data-testid="app-container">
       <WelcomeBanner />
       <DndProvider backend={HTML5Backend}>
         <TodoContainer />

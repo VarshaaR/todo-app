@@ -8,10 +8,17 @@ import {
 } from "../utils/localStorageUtils";
 import { Todo, Status } from "../types/todo";
 import EmptyTaskContainer from "./EmptyTaskContainer";
+import { useTranslation } from "react-i18next";
 
 const TodoContainer = function () {
   const [tasks, setTasks] = useState<Todo[]>([]);
   const [filter, setFilter] = useState<Status>(Status.All);
+  const { t } = useTranslation();
+  const [taskCounts, setTaskCounts] = useState({
+    [Status.All]: 0,
+    [Status.Completed]: 0,
+    [Status.Pending]: 0,
+  });
 
   useEffect(() => {
     const storedTasks = loadFromLocalStorage();
@@ -24,6 +31,17 @@ const TodoContainer = function () {
       setFilter(Status.All);
     }
   }, [tasks]);
+
+  useEffect(() => {
+    setTaskCounts({
+      [Status.All]: tasks.length,
+      [Status.Completed]: tasks.filter(
+        (task) => task.status === Status.Completed,
+      ).length,
+      [Status.Pending]: tasks.filter((task) => task.status === Status.Pending)
+        .length,
+    });
+  }, [tasks, filter]);
 
   const addTask = (newTask: Todo) => {
     setTasks((prev) => [...prev, newTask]);
@@ -58,7 +76,7 @@ const TodoContainer = function () {
 
   return (
     <div
-      className="cb-flex cb-flex-row cb-flex-wrap cb-px-4 cb-py-6 cb-gap-2 cb-justify-between"
+      className="cb-flex cb-flex-row cb-flex-wrap cb-gap-2 cb-justify-between cb-px-8 cb-py-10"
       data-testid="todo-container"
     >
       <div className="cb-w-[70%]" data-testid="todo-list-wrapper">
@@ -81,8 +99,18 @@ const TodoContainer = function () {
                   }`}
                 >
                   {status.charAt(0).toUpperCase() + status.slice(1)}
+                  <span className="cb-ml-1">({taskCounts[status]})</span>
                 </button>
               ))}
+              <div className="cb-text-sm cb-ml-auto cb-text-gray-700 cb-pl-4 cb-py-1">
+                {t("common.sorted.by")}: {t("common.due.date")}
+              </div>
+              <div
+                className="cb-fixed cb-bottom-4 cb-right-4 z-10"
+                data-testid="trashbin-container"
+              >
+                <TrashBin onConfirmDelete={deleteTask} />
+              </div>
             </div>
             {filteredTasks.length === 0 ? (
               <EmptyTaskContainer status={filter} />
@@ -99,13 +127,6 @@ const TodoContainer = function () {
 
       <div className="cb-min-w-fit" data-testid="add-list-container">
         <TodoForm addTask={addTask} />
-      </div>
-
-      <div
-        className="cb-fixed cb-bottom-4 cb-right-4 z-10"
-        data-testid="trashbin-container"
-      >
-        <TrashBin onConfirmDelete={deleteTask} />
       </div>
     </div>
   );
