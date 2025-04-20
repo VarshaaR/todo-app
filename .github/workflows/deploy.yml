@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - feat-optimise-build # or your preferred branch
+      - main # or your preferred branch
 
 permissions:
   contents: write
