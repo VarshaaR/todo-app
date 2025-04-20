@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - feature-github-page # or your preferred branch
+      - main # or your preferred branch
 
 permissions:
   contents: write
