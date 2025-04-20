@@ -21,6 +21,9 @@ jobs:
         with:
           node-version: 18
 
+      - name: Clear node_modules, dist, and .vite cache
+        run: rm -rf node_modules dist .vite
+
       - name: Install dependencies
         run: yarn install
 
