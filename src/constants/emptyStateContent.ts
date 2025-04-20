@@ -1,5 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { Status } from "../types/todo";
+import EmptyCompleted from "../assets/EmptyCompleted.svg";
+import EmptyPending from "../assets/EmptyPending.svg";
+import EmptyTaskList from "../assets/emptyTaskList.svg";
+
 export interface EmptyStateContent {
   completed: {
     image: string;
@@ -23,17 +27,17 @@ export const useEmptyStateContent = (status: Status) => {
 
   const content: EmptyStateContent = {
     [Status.Completed]: {
-      image: "/src/assets/EmptyCompleted.svg",
+      image: EmptyCompleted,
       title: t("emptyState.completed.title"),
       description: t("emptyState.completed.description"),
     },
     [Status.Pending]: {
-      image: "/src/assets/EmptyPending.svg",
+      image: EmptyPending,
       title: t("emptyState.pending.title"),
       description: t("emptyState.pending.description"),
     },
     [Status.All]: {
-      image: "/src/assets/EmptyTaskList.svg",
+      image: EmptyTaskList,
       title: t("emptyState.all.title"),
       description: t("emptyState.all.description"),
     },
