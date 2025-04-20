@@ -1,54 +1,95 @@
-# React + TypeScript + Vite
+# 📝 Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Todo application built with Vite, React, TypeScript, and Yarn.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
 
-## Expanding the ESLint configuration
+A live demo of the Todo App is available at:  
+[https://varshaar.github.io/todo-app/](https://varshaar.github.io/todo-app/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+
+## 🚀 Installation
+
+This project uses [Vite](https://vitejs.dev/), [React](https://react.dev/), [TypeScript](https://www.typescriptlang.org/), and is managed with [Yarn](https://classic.yarnpkg.com/).
+
+### ✅ Prerequisites
+
+- **Node.js**: v22.9.0 or higher  
+- **Yarn (Classic)**: v1.22.22 or higher
+
+---
+
+## Environment Requirements
+
+- Node.js version: >= 16.x (recommended)
+- Yarn version: >= 1.22.x (recommended)
+
+---
+
+## Project Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/VarshaaR/todo-app.git
+   cd todo-app
+   ```
+
+2. Install dependencies:
+   ```bash
+   yarn install
+   ```
+
+3. Run the development server:
+   ```bash
+   yarn dev
+   ```
+
+4. Build the project for production:
+   ```bash
+   yarn build
+   ```
+
+5. Preview the production build:
+   ```bash
+   yarn preview
+   ```
+
+---
+
+## Repository Structure
+
+- `src/` - Source files including components, assets, constants, styles, types, and utilities.
+- `public/` - Static assets served directly.
+- `.github/` - GitHub workflows and configurations.
+- `.husky/` - Husky git hooks configuration.
+- `dist/` - Production build output.
+- Configuration files for ESLint, Prettier, Tailwind, TypeScript, Vite, Jest, etc.
+
+---
+
+## Technologies Used
+
+- Tailwind CSS for utility-first styling.
+- Material UI for React component design.
+- Vite, React, TypeScript, and Yarn as core technologies.
+
+---
+## Git Hooks and Commit Linting
+
+This project uses [Husky](https://typicode.github.io/husky/#/) to manage Git hooks.
+
+- Husky is configured to run pre-commit and commit-msg hooks to ensure code quality and commit message standards.
+- Commit messages are validated using [commitlint](https://commitlint.js.org/#/) to help maintain consistent and meaningful commit history.
+
+Make sure to write commit messages following the configured commitlint rules to avoid commit rejections.
+
+Example commit message format:
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+<type>(<scope>): <subject>
 ```
+Where `<type>` can be `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, etc.
+
+---
