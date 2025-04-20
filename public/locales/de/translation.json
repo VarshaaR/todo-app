@@ -1,6 +1,44 @@
 {
-    "welcome": {
-      "title": "Hallo, willkommen!",
-      "description": "Hier sind deine Aufgaben für heute – lass sie uns erledigen!"
+  "common": {
+    "date": "Datum",
+    "new.task": "Neue Aufgabe erstellen",
+    "task.name": "Aufgabenname",
+    "due.date": "Fälligkeitsdatum",
+    "category": "Kategorie",
+    "add.task": "Aufgabe hinzufügen",
+    "work": "Arbeit",
+    "personal": "Persönlich",
+    "delete": "Löschen",
+    "cancel": "Abbrechen",
+    "drop.here": "Ziehe die Aufgabe hierher, um sie zu löschen"
+  },
+  "empty": {
+    "title": "Hurra! Du hast alle Aufgaben erledigt",
+    "desc": "Mach weiter so und füge neue Aufgaben hinzu, um produktiv zu bleiben.",
+    "alt.image.text": "Leerer Aufgabenstatus Bild"
+  },
+  "welcome": {
+    "title": "Hallo und willkommen!",
+    "description": "Hier sind deine heutigen Aufgaben – packen wir es an!"
+  },
+  "emptyState": {
+    "completed": {
+      "title": "Du bist auf einem guten Weg!",
+      "description": "Du machst Fortschritte! Weiter so, um deine Aufgaben abzuschließen."
+    },
+    "pending": {
+      "title": "Du rockst das!",
+      "description": "Alle Aufgaben sind erledigt. Gönn dir eine wohlverdiente Pause!"
+    },
+    "all": {
+      "title": "Hurra! Du hast alle Aufgaben erledigt",
+      "description": "Mach weiter so und füge neue Aufgaben hinzu, um produktiv zu bleiben."
+    }
+  },
+  "bin": {
+    "confirm.model": {
+      "title": "Löschen bestätigen",
+      "desc": "Bist du sicher, dass du diese Aufgabe löschen möchtest?"
     }
   }
+}
