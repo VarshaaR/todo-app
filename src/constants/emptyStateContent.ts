@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { Status } from "../types/todo";
-import EmptyCompleted from "../assets/emptyCompleted.svg";
-import EmptyPending from "../assets/emptyPending.svg";
-import EmptyTaskList from "../assets/emptyTaskList.svg";
+import EmptyCompleted from "../assets/illustrations/empty-completed.svg";
+import EmptyPending from "../assets/illustrations/empty-pending.svg";
+import EmptyTaskList from "../assets/illustrations/empty-taskList.svg";
 
 export interface EmptyStateContent {
   completed: {
