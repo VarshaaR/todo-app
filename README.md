@@ -74,6 +74,7 @@ This project uses [Vite](https://vitejs.dev/), [React](https://react.dev/), [Typ
 
 - Tailwind CSS for utility-first styling.
 - Material UI for React component design.
+- i18next for internationalization with support for French and German languages.
 - Vite, React, TypeScript, and Yarn as core technologies.
 
 ---
